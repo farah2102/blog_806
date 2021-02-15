@@ -1,8 +1,10 @@
 <?php
 
 function connectDB () {
+    include_once __DIR__ . '/../config/config_bdd.php';
+
     try {
-       $connectDB = new PDO ('mysql:host=localhost;dbname=formawave_php_fil_rouge','root','root');
+       $connectDB = new PDO ('mysql:host=' .$host . ';dbname=' . $dbName, $user, $password);
         return $connectDB;}
     catch (PDOException $e){
         include __DIR__ . "/../erreurs/500.php";
