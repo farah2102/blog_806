@@ -5,8 +5,7 @@ function connectDB () {
        $connectDB = new PDO ('mysql:host=localhost;dbname=formawave_php_fil_rouge','root','root');
         return $connectDB;}
     catch (PDOException $e){
-        echo $e->getCode();
-        echo $e->getMessage();
+        include __DIR__ . "/../erreurs/500.php";
         die();
     }
 }

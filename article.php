@@ -6,7 +6,7 @@
             $article = getArticle($_GET['id']);
 
             if ($article == false) {
-                include '404.php';
+                include 'erreurs/404.php';
                 die;
             }
 
@@ -26,5 +26,5 @@
     <?php include 'layout/footer.php';
             
 } else {
-    include '404.php';
+    include 'erreurs/404.php';
 }
